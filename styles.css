@@ -1,0 +1,182 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #0e153a, #2253c7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.section {
+    flex: 1;
+    padding: 2%;
+}
+
+.left-section, .right-section {
+    flex: 1;
+    border-radius: 35px;
+    padding: 50px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    max-height: 750px;
+}
+.left-section {
+    background: linear-gradient(to right, #0e153a, #2253c7);
+    color: #fff;
+    margin-right: 2%;
+}
+.right-section {
+    background-color: #354a6e;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    margin: 20px 0;
+    font-size: 48px;
+    position: relative;
+    overflow: hidden;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #4e6ef2, #51d366);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease;
+}
+
+h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+textarea {
+    width: 800px; /* Ajuste del ancho para considerar el padding */
+    height: 500px; /* Establecer el 80% de la altura visible (viewport height) */
+    padding: 2px;
+    margin: 10px 0 3px;
+    box-sizing: content-box;
+    border: 0px solid #ffffff;
+    border-radius: 15px;
+    background-color: #354a6e;
+    color: #fff;
+    resize: none;
+    font-size: 24px;
+    transition: box-shadow 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+
+textarea::placeholder {
+    color: #849fc7;
+    font-size: 30px;
+    opacity: 0.8; /* Ajustada la opacidad del placeholder para mayor legibilidad */
+    transition: opacity 0.5s ease;
+}
+
+textarea:focus {
+    box-shadow: 0 0 10px rgba(78, 110, 242, 0.8); /* Ajustado el color de la sombra en el enfoque */
+    color: #fff;
+    border-color: #4e6ef2; /* Cambiado el color del borde en el enfoque */
+}
+
+textarea:focus::placeholder {
+    opacity: 1;
+}
+
+button {
+    display:-ms-flexbox;
+    padding: 25px 50px; 
+    font-size: 40px; 
+    border: 1px solid #4e6ef2;
+    background-color: #4e6ef2;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-right: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #3b5998;
+    transform: scale(1.1); /* Aumento del tamaño en hover */
+    box-shadow: 0 0 15px rgba(78, 110, 242, 0.5); /* Sutil sombra en hover */
+}
+#encriptarBtn {
+    background-color: #4e6ef2;
+    color: #fff;
+}
+
+#desencriptarBtn {
+    background-color: #51d366;
+    color: #fff;
+}
+
+.div2 {
+    max-width:  100%;
+    background-color: #354a6e;
+    overflow: auto;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#resultado {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 1%;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    max-width: 100%;
+    max-height: 400px; 
+    overflow: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+p {
+    position: relative;
+}
+
+
+
+.div2 {
+    flex: 1;
+    margin-bottom: 600px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+footer {
+    text-align: center;
+    margin-top: auto;
+    color: #aaa;
+    font-size: 14px;
+    padding-top: 5%;
+}

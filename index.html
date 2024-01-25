@@ -1,34 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador/Desencriptador</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="matrix.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="left-section">
-            <h1>Encriptador/Desencriptador</h1>
+
+    <div id="container" class="elementos-encima">
+        <div class="in-flex">
+            <h1>
+                <span id="text"></span><div class="console-underscore" id="console">&#95</div>
+            <div class="fixed">
+                <div class="switch-container">    
+                <label for="encryptionSwitch" class="switch-label animated-label"></label>
+                <input type="checkbox" id="encryptionSwitch" class="switch-input">
+                <span class="switch-slider"></span>
+                </div>
+                
             
-            <textarea id="texto" placeholder="Ingrese su texto aquí"></textarea>
+            </div></h1>
             
-            <button id="encriptarBtn">Encriptar</button>
-            <button id="desencriptarBtn">Desencriptar</button>
+
+            <textarea id="texto" class="textA-normal" placeholder="Ingrese su texto aquí"></textarea>
+
+            <button id="encriptarBtn" class="button-normal">Encriptar</button>
+            <button id="desencriptarBtn" class="button-normal">Desencriptar</button>
+
+            
         </div>
-        
-        <div class="right-section">
-            <div class="div2">
-                <h2>Texto Resultante:</h2>
-                <p id="resultado"></p>
+
+        <div class="in-flex">
+
+
+            <textarea id="resultado" class="resultado-text textA-normal" readonly
+                placeholder="Aquí aparecerá el texto cifrado/descifrado"></textarea>
+            <button id="copiarBtn" class="button-normal">Copiar</button>
+
+            <div class="in-flex esqueleto-container esqueleto-oculto">
+                <img id="esqueleto" src="skull-closed.png" alt="Esqueleto"
+                    class="esqueleto">
             </div>
-            
             <footer>
                 Desarrollado por: Ittai Tapia
             </footer>
         </div>
     </div>
-    
+    <canvas id="canv" width="500" height="200"></canvas>
     <script type="module" src="main.mjs"></script>
 </body>
+
 </html>

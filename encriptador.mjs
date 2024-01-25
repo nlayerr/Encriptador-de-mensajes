@@ -16,9 +16,11 @@ const encriptarTexto = (texto) => {
     return textoEncriptado.join('');
 };
 
-/* const userTexto = 'Hola bienvenido!, este es un mensaje de prueba';
-const convertText = encriptarTexto(userTexto);
 
-console.log(convertText); */
+const encriptarTextoAvanzado = (texto) => {
 
-export default encriptarTexto;
+    return texto.split('').map(char => String.fromCharCode(char.charCodeAt(0) + 3)).join('');
+        
+}
+
+export default {encriptarTexto, encriptarTextoAvanzado};

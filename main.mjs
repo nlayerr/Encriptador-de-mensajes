@@ -102,7 +102,7 @@ function escribirResultadoConAnimacion(texto) {
                     const mensajeError = " //El texto no debe contener mayusculas, ni numeros o caracteres especiales :(, (//no hagas caso a esta alerta sigue encryptando xD)"
                     setTimeout(function () {
                         resultadoElemento.innerHTML += mensajeError;
-                    }, 1000);
+                    }, i);
                 }
             }
         }, velocidadEscritura);

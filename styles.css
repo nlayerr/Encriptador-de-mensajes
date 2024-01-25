@@ -83,7 +83,7 @@ button {
     cursor: pointer;
     resize: none;
     z-index: 3;
-    top: 100px;
+    bottom: 45px;
     position: relative;
     overflow: hidden;
     @media (min-width: 768px) {
